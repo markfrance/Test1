@@ -1,0 +1,41 @@
+﻿@model RaisingIt.RecruitmentTest.Domain.Donations.Donation[]
+
+@{
+    ViewBag.Title = "Donations";
+}
+
+<h2>Donations</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var donation in Model)
+{
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">@donation.Name</div>
+                <div class="panel-body">
+                    <div class="col-xs-4">
+                        @donation.Campaign
+                    </div>
+                    <div class="col-xs-4">
+                        @donation.Date
+                    </div>
+                    <div class="col-xs-4">
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+@Html.ActionLink("Back", "Back")
+

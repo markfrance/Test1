@@ -1,0 +1,28 @@
+﻿@model RaisingIt.RecruitmentTest.Domain.Campaigns.Campaign[]
+@{
+    ViewBag.Title = "Campaigns";
+}
+<h1>
+    Campaigns
+</h1>
+@foreach (var campaign in Model)
+{
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">@campaign.Name</div>
+                <div class="panel-body">
+                    <div class="col-xs-4">
+                        @campaign.Description
+                    </div>
+                    <div class="col-xs-4">
+                        Goal: £@campaign.Goal
+                    </div>
+                    <div class="col-xs-4">
+                        @Html.ActionLink("Show donations", "Index", "Donations")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
