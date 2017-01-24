@@ -4,9 +4,10 @@ namespace RaisingIt.RecruitmentTest.Domain.Donations
 {
     public class Donation
     {
-        public Guid Guid { get; set; }
+        public Guid Campaign { get; set; }
         public string Name { get; set; }
-        public string Campaign { get; set; }
-        public string Date { get; set; }
+        public double Amount { get; set; }
+        public string Message { get; set; }
+        public DateTimeOffset TimeStamp { get; set; }
     }
 }

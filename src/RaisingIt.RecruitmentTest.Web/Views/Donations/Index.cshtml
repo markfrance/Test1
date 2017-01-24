@@ -18,13 +18,16 @@
             <div class="panel panel-default">
                 <div class="panel-heading">@donation.Name</div>
                 <div class="panel-body">
-                    <div class="col-xs-4">
+                    <div class="col-xs-3">
                         @donation.Campaign
                     </div>
-                    <div class="col-xs-4">
-                        @donation.Date
+                    <div class="col-xs-3">
+                        @donation.TimeStamp
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-3">
+                        @donation.Message
+                    </div>
+                    <div class="col-xs-3">
                         @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                         @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                         @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })

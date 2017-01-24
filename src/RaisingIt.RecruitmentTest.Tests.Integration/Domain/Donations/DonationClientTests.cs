@@ -22,10 +22,11 @@ namespace RaisingIt.RecruitmentTest.Tests.Integration.Domain.Donations
 
             foreach (var donation in result)
             {
-                Assert.That(donation.Guid, Is.Not.EqualTo(Guid.Empty));
+                Assert.That(donation.Campaign, Is.Not.EqualTo(Guid.Empty));
                 Assert.That(donation.Name, Is.Not.Null.Or.Empty);
-                Assert.That(donation.Campaign, Is.Not.Null.Or.Empty);
-                Assert.That(donation.Date, Is.Not.Null.Or.Empty);
+                Assert.That(donation.Message, Is.Not.Null.Or.Empty);
+                Assert.That(donation.Amount, Is.EqualTo(0));
+                Assert.That(donation.TimeStamp, Is.Not.Null.Or.Empty);
             }
         }
     }

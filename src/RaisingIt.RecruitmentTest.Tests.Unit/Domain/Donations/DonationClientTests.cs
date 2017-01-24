@@ -49,10 +49,12 @@ namespace RaisingIt.RecruitmentTest.Tests.Unit.Domain.Donations
             {
                 new Donation
                 {
-                    Campaign = "test-desc",
-                    Date = "24/01/2017",
-                    Guid = Guid.NewGuid(),
-                    Name = "some-name"
+                    Campaign = Guid.Empty,
+                    TimeStamp =new DateTimeOffset(),
+                    Name = "some-name",
+                    Amount = 0,
+                    Message = "test"
+
                 }
             };
 
